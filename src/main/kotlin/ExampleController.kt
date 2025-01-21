@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController
 class HelloController {
     @GetMapping("/test")
     fun index(filterExample: FilterExample): String {
-        return "Greetings from Spring Boot!"
+        return filterExample.toString()
     }
 }
 

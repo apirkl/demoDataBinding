@@ -18,7 +18,7 @@ class ExampleControllerTest {
          mockMvc.get("/test?testMap[operator]=<&testMap[value]=12345") {
          }.andExpect {
              status { isOk() }
-             content { string("Greetings from Spring Boot!") }
+             content { string("FilterExample(testMap={operator=<, value=12345})") }
          }
      }
 }
