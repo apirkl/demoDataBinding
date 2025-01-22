@@ -5,7 +5,6 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.get
-import org.springframework.test.web.servlet.request
 
 @AutoConfigureMockMvc
 @SpringBootTest(classes = [Application::class])
@@ -18,7 +17,7 @@ class ExampleControllerTest {
          mockMvc.get("/test?testMap[operator]=<&testMap[value]=12345") {
          }.andExpect {
              status { isOk() }
-             content { string("FilterExample(testMap={operator=<, value=12345})") }
+             content { string("FilterExample(testMap={operator=[<], value=[12345]})") }
          }
      }
 }

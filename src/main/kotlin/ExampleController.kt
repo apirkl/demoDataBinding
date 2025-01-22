@@ -12,4 +12,4 @@ class HelloController {
     }
 }
 
-data class FilterExample(@RequestParam(required = false) var testMap: Map<String,String>? = null)
+data class FilterExample(@RequestParam(required = false) var testMap: Map<String,Set<String>>? = null)
